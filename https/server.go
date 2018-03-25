@@ -11,7 +11,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fmt.Println("HTTPS...")
+	fmt.Println("HTTPS Server...")
 
 	http.HandleFunc("/", handler)
 
@@ -19,5 +19,5 @@ func main() {
 
 	http.ListenAndServeTLS(":10443", "cert.pem", "key.pem", nil)
 
-	fmt.Println("HTTPS.END .")
+	fmt.Println("HTTPS Server. END.")
 }
